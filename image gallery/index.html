@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+
+  
+    <center>
+        <h1 class="title-bar">Image Gallery</h1>
+    </center>
+    <div class="total-image" id="fullImgbox">
+        <img src="pic 1.jpg" id="fullImg"   width=250px>
+        <span onclick="closeImg()">X</span>
+
+    </div>
+
+
+    <div class="image-gallery">
+
+        <img src="pic 1.jpg" onclick="openImg( this.src)">
+     
+        <img src="pic 8.jpg" onclick="openImg(this.src)">
+
+        <img src="pic 3.jpg" onclick="openImg(this.src)" height="420">
+        <img src="pic 4.jpg" onclick="openImg(this.src)">
+        <img src="pic 5.jpg" onclick="openImg(this.src)">
+        <img src="pic 6.jpg" onclick="openImg(this.src)" height="420">
+        <img src="pic 7.jpg" onclick="openImg(this.src)">
+        <img src="pic 2.jpg" onclick="openImg(this.src)" height="420">
+    </div>
+
+<script>
+    var fullImgbox = document.getElementById("fullImgbox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openImg(pic) {
+        fullImgbox.style.display = "flex";
+        fullImg.src=pic;
+
+    }
+    function closeImg(){
+        fullImgbox.style.display ="none"
+    }
+
+    
+</script>
+</body>
+
+</html>
